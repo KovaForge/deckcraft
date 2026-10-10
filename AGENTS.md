@@ -178,3 +178,41 @@ tracks status, milestones, parity and estimates; update it whenever a milestone 
   GitHub profiles). Never hand-edit `contributors.json`.
 - Maintainers refresh the stats with `python3 ../../craftrules/scripts/contributors.py .` (it also
   re-verifies who wrote each `people.toml` entry; `--check` only verifies).
+
+<!-- kovaforge-fork-context -->
+## KovaForge fork context
+
+Forked from: `storytold/deckcraft`
+Fork date: 2026-10-10
+Forked by: Vladislava Kova
+
+### Git identity
+
+Before any commit in this repo, use the per-person wrapper (`git-vladislava`, `git-mikhail`, `git-declan`, …). Do not bare `git push`.
+
+### Commit alias
+
+Use `git commit-kf "message"` instead of plain `git commit`. The alias enforces identity validation, a staged-file secret scan, and Co-authored-by trailers.
+
+See: `vault/protocols/KVF-DEV-POL-001_Git_Policy.md`
+
+### Co-authors (permanent)
+
+Every commit must include:
+
+```
+Co-authored-by: Michael D <McoreD@users.noreply.github.com>
+Co-authored-by: vladislava-kova-kf <vladislava-kova-kf@users.noreply.github.com>
+```
+
+### Clone paths (this host)
+
+Linux canonical root is `/home/mike/Work` (relocated from `/Users/mike/Projects`).
+
+- Upstream: `/home/mike/Work/storytold/deckcraft`
+- KovaForge fork: `/home/mike/Work/KovaForge/deckcraft`
+- Remotes on the fork: `origin` = `https://github.com/KovaForge/deckcraft.git`, `upstream` = `https://github.com/storytold/deckcraft.git`
+
+### Secrets
+
+Never commit `.env`, `*.env`, `secrets.json`, or `credentials.*`.
